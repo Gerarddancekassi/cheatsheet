@@ -1,10 +1,15 @@
+*{
+  scroll-behavior: smooth;
+}
+
 nav .bigtitle {
   font-family: Silkscreen;
   text-align: center;
   background-color: #40B5AD;
   position: fixed;
   z-index:1;
-  box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  border-radius: 5px;
 }
 
 a {
@@ -15,23 +20,49 @@ a {
 header a:hover {
   text-decoration-thickness: .5em;
   font-weight: bold;
-  color:#0D0907;
+  color:black;
+
+}
+
+body{
+  background-color:#F8F0E3;
 }
 
 #all-tables{
-  margin-top: 200px;
+  margin-top: 150px;
   position: absolute;
 }
 
 p {
   display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+p:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+p:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 table{
-  width: 100%;
-  background-color:#ADD8E6;
+  background-color:	#ADD8E6;
   font-family: "Roboto Mono";
-  margin: 10px 70px 70px;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 70px;
   box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
 }
 
